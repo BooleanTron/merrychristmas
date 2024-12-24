@@ -1,0 +1,21 @@
+/* For screens less than 768px wide */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .message {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .image-gallery,
+    .gif-gallery {
+        flex-direction: column;
+    }
+
+    .media-item {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+}

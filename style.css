@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* General Styles */
+body {
+    margin: 5px;
+    padding: 2px;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, rgb(208, 252, 208),#fa0202, #e7b1eb,rgb(141, 207, 237), white);
+    color: black;
+    overflow-x: hidden;
+}
+h1{
+    color: rgb(252, 211, 6);
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(255, 242, 4);
+    border-width: 1px;
+    border-style: solid;
+    border-radius:30px;
+}
+
+.main-container {
+    align-self: center;
+    text-align: center;
+    margin: 0 auto; /* This will center the div horizontally */
+    padding: 2em;
+    width: 80%;
+    max-width: 1200px;
+    background-color: black;
+    border-radius: 30px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    background-image: url('background.jpg');
+    position: relative;
+    isolation: isolate;
+}
+
+
+.main-container ::after{
+    content: '';
+    position: absolute;
+    background: beige;
+    inset: 0;
+    z-index: -1;
+    opacity: .05;
+}
+
+/* Add this to your existing CSS */
+#snowflake-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through to the content */
+    z-index: 9999; /* Places the snowfall above all other elements */
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -10px; /* Start just above the viewport */
+    color: white;
+    font-size: 1rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh); /* Fall through the entire screen */
+    }
+  }
+  
+  
+
+/* Title */
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Messages */
+.message {
+    margin: 20px auto;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #000000;
+    background: rgb(247, 5, 5);
+    border-radius: 30px;
+    border-color: rgb(253, 224, 2);
+    border-style: solid;
+    border-width: 3px;
+}
+
+/* Image Gallery */
+.image-gallery,
+.gif-gallery {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.media-item {
+    position: relative;
+    background: lavender;
+    padding: 10px;
+    border-radius: 30px;
+    border-color: rgba(248, 195, 4, 0.458);
+    border-style: solid;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.media-item p {
+    left: 50%;
+    font-size: 1.2rem;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.media-item img,
+.video-container video {
+    height: 30em;
+    max-width: 100%;
+    border-radius: 30px;
+}
+
+/* Video Container */
+.video-container {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 50%;
+    background-color: lavender;
+    border-radius: 30px;
+    border-style:solid;
+    border-width:3px;
+    border-color: rgb(253, 224, 2);
+}
+
+/* Final Message */
+.final-message {
+    margin: 40px auto;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+}
